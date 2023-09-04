@@ -186,21 +186,31 @@ Example for **RBOT dataset evaluation**.
    std::filesystem::path result_directory{"/home/full/path/to/RBOT_evaluation/result/"};
    ```
 
-```
-g++ -fopenmp -lGLEW -lglfw -I /usr/include/eigen3 -I /usr/local/include/opencv4 -I /usr/local/include/m3t -I $cwd/M3T/examples/ -c $cwd/M3T/examples/evaluate_rbot_dataset.cpp -o $cwd/M3T/examples/evaluate_rbot_dataset.o
+5. Set the current working directory variable
 
-g++ -fopenmp -lGLEW -lglfw -I /usr/include/eigen3 -I /usr/local/include/opencv4 -c $cwd/M3T/examples/rbot_evaluator.cpp -o $cwd/M3T/examples/rbot_evaluator.o
-```
+   ```
+   cwd=$(pwd)
+   ```
 
-```
-g++ -fopenmp -lGLEW -lglfw $cwd/M3T/examples/evaluate_rbot_dataset.o $cwd/M3T/examples/rbot_evaluator.o -L /usr/local/lib -lm3t -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -lopencv_calib3d -lopencv_features2d -lopencv_xfeatures2d -lGLEW -lglfw -lGL -o $cwd/M3T/examples/evaluate_rbot_dataset
-```
+6. Link evaluate_rbot_dataset.cpp and rbot_evaluator.cpp
 
-To run it:
+   ```
+   g++ -fopenmp -lGLEW -lglfw -I /usr/include/eigen3 -I /usr/local/include/opencv4 -I /usr/local/include/m3t -I $cwd/M3T/examples/ -c $cwd/M3T/examples/evaluate_rbot_dataset.cpp -o $cwd/M3T/examples/evaluate_rbot_dataset.o
 
-```
-$cwd/M3T/examples/evaluate_rbot_dataset
-```
+   g++ -fopenmp -lGLEW -lglfw -I /usr/include/eigen3 -I /usr/local/include/opencv4 -c $cwd/M3T/examples/rbot_evaluator.cpp -o $cwd/M3T/examples/rbot_evaluator.o
+   ```
+
+7. Build
+
+   ```
+   g++ -fopenmp -lGLEW -lglfw $cwd/M3T/examples/evaluate_rbot_dataset.o $cwd/M3T/examples/rbot_evaluator.o -L /usr/local/lib -lm3t -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -lopencv_calib3d -lopencv_features2d -lopencv_xfeatures2d -lGLEW -lglfw -lGL -o $cwd/M3T/examples/evaluate_rbot_dataset
+   ```
+
+8. To run it:
+
+   ```
+   $cwd/M3T/examples/evaluate_rbot_dataset
+   ```
 
 ## Usage example
 
