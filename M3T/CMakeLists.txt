@@ -8,7 +8,7 @@ project(M3T)
 # Options
 # =============================================================================
 option(USE_AZURE_KINECT "Use Azure Kinect" ON)
-option(USE_REALSENSE "Use RealSense D435" ON)
+option(USE_REALSENSE "Use RealSense D435") # RealSense disabled
 option(USE_GTEST "Use gtest" ON)
 
 
