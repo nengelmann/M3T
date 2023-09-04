@@ -163,7 +163,7 @@ cd $cwd/M3T && mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 sudo make install
-$cwd
+cd $cwd
 ```
 
 **If any of the installation steps fails, please open a descriptive issue**
