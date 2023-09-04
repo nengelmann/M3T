@@ -178,7 +178,7 @@ Example for **RBOT dataset evaluation**.
 2. You need to create two folders, one for external files or generated files and one for the results, e.g. `./RBOT_evaluation/external/` and `./RBOT_evaluation/result/`
 3. Open `$cwd/M3T/examples/evaluate_rbot_dataset.cpp` and edit the file paths according to your setup
    e.g.
-4. Also set `  evaluator.set_visualize_all_results(false);` to `evaluator.set_visualize_all_results(true);` to visualize the results. (optional)
+4. Also set `evaluator.set_visualize_all_results(false);` to `evaluator.set_visualize_all_results(true);` to visualize the results. (optional)
 
    ```
    std::filesystem::path dataset_directory{"/home/full/path/to/RBOT_dataset/"};
@@ -194,7 +194,6 @@ g++ -fopenmp -lGLEW -lglfw -I /usr/include/eigen3 -I /usr/local/include/opencv4 
 
 ```
 g++ -fopenmp -lGLEW -lglfw $cwd/M3T/examples/evaluate_rbot_dataset.o $cwd/M3T/examples/rbot_evaluator.o -L /usr/local/lib -lm3t -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -lopencv_calib3d -lopencv_features2d -lopencv_xfeatures2d -lGLEW -lglfw -lGL -o $cwd/M3T/examples/evaluate_rbot_dataset
-
 ```
 
 To run it:
@@ -245,7 +244,3 @@ Preceding work, as well es more details about the original work ([3DObjectTracki
 - **A Sparse Gaussian Approach to Region-Based 6DoF Object Tracking**
   Manuel Stoiber, Martin Pfanne, Klaus H. Strobl, Rudolph Triebel, and Alin Albu-Schäffer
   [Best Paper] Asian Conference on Computer Vision 2020: [paper](https://openaccess.thecvf.com/content/ACCV2020/papers/Stoiber_A_Sparse_Gaussian_Approach_to_Region-Based_6DoF_Object_Tracking_ACCV_2020_paper.pdf), [supplementary](https://openaccess.thecvf.com/content/ACCV2020/supplemental/Stoiber_A_Sparse_Gaussian_ACCV_2020_supplemental.zip)
-
-```
-
-```
