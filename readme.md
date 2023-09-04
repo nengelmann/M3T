@@ -166,6 +166,41 @@ sudo make install
 cd $cwd
 ```
 
+## Test the installation
+
+### Build and run evaluation example
+
+Example for **RBOT dataset evaluation**.
+
+1. Download the RBOT dataset from [here](https://www.mi.hs-rm.de/~schwan/research/RBOT/) and unzip.
+2. You need to create two folders, one for external files or generated files and one for the results, e.g. `./RBOT_evaluation/external/` and `./RBOT_evaluation/result/`
+3. Open `$cwd/M3T/examples/evaluate_rbot_dataset.cpp` and edit the file paths according to your setup
+   e.g.
+4. Also set `  evaluator.set_visualize_all_results(false);` to `evaluator.set_visualize_all_results(true);` to visualize the results. (optional)
+
+   ```
+   std::filesystem::path dataset_directory{"/home/full/path/to/RBOT_dataset/"};
+   std::filesystem::path external_directory{"/home/full/path/to/RBOT_evaluation/external/"};
+   std::filesystem::path result_directory{"/home/full/path/to/RBOT_evaluation/result/"};
+   ```
+
+```
+g++ -fopenmp -lGLEW -lglfw -I /usr/include/eigen3 -I /usr/local/include/opencv4 -I /usr/local/include/m3t -I $cwd/M3T/examples/ -c $cwd/M3T/examples/evaluate_rbot_dataset.cpp -o $cwd/M3T/examples/evaluate_rbot_dataset.o
+
+g++ -fopenmp -lGLEW -lglfw -I /usr/include/eigen3 -I /usr/local/include/opencv4 -c $cwd/M3T/examples/rbot_evaluator.cpp -o $cwd/M3T/examples/rbot_evaluator.o
+```
+
+```
+g++ -fopenmp -lGLEW -lglfw $cwd/M3T/examples/evaluate_rbot_dataset.o $cwd/M3T/examples/rbot_evaluator.o -L /usr/local/lib -lm3t -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -lopencv_calib3d -lopencv_features2d -lopencv_xfeatures2d -lGLEW -lglfw -lGL -o $cwd/M3T/examples/evaluate_rbot_dataset
+
+```
+
+To run it:
+
+```
+$cwd/M3T/examples/evaluate_rbot_dataset
+```
+
 **If any of the installation steps fails, please open a descriptive issue**
 
 ## Usage example
@@ -187,26 +222,30 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 
 Preceding work, as well es more details about the original work ([3DObjectTracking](https://github.com/DLR-RM/3DObjectTracking/tree/master), Manuel Stoiber) is listed in the following:
 
-- **Closing the Loop: 3D Object Tracking for Advanced Robotic Manipulation**  
-   Manuel Stoiber  
-   Dissertation submitted to the Technical University of Munich
+- **Closing the Loop: 3D Object Tracking for Advanced Robotic Manipulation**
+  Manuel Stoiber
+  Dissertation submitted to the Technical University of Munich
 
-- **A Multi-body Tracking Framework - From Rigid Objects to Kinematic Structures**  
-   Manuel Stoiber, Martin Sundermeyer, Wout Boerdijk, and Rudolph Triebel  
-   Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence: [paper](https://arxiv.org/abs/2208.01502)
+- **A Multi-body Tracking Framework - From Rigid Objects to Kinematic Structures**
+  Manuel Stoiber, Martin Sundermeyer, Wout Boerdijk, and Rudolph Triebel
+  Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence: [paper](https://arxiv.org/abs/2208.01502)
 
-- **Fusing Visual Appearance and Geometry for Multi-Modality 6DoF Object Tracking**  
-   Manuel Stoiber, Mariam Elsayed, Anne E. Reichert, Florian Steidle, Dongheui Lee, and Rudolph Triebel  
-   Submitted to IEEE/RSJ International Conference on Intelligent Robots 2023: [paper](https://arxiv.org/abs/2302.11458)
+- **Fusing Visual Appearance and Geometry for Multi-Modality 6DoF Object Tracking**
+  Manuel Stoiber, Mariam Elsayed, Anne E. Reichert, Florian Steidle, Dongheui Lee, and Rudolph Triebel
+  Submitted to IEEE/RSJ International Conference on Intelligent Robots 2023: [paper](https://arxiv.org/abs/2302.11458)
 
-- **Iterative Corresponding Geometry: Fusing Region and Depth for Highly Efficient 3D Tracking of Textureless Objects**  
-   Manuel Stoiber, Martin Sundermeyer, and Rudolph Triebel  
-   IEEE/CVF Conference on Computer Vision and Pattern Recognition 2022: [paper](https://arxiv.org/abs/2203.05334)
+- **Iterative Corresponding Geometry: Fusing Region and Depth for Highly Efficient 3D Tracking of Textureless Objects**
+  Manuel Stoiber, Martin Sundermeyer, and Rudolph Triebel
+  IEEE/CVF Conference on Computer Vision and Pattern Recognition 2022: [paper](https://arxiv.org/abs/2203.05334)
 
-- **SRT3D: A Sparse Region-Based 3D Object Tracking Approach for the Real World**  
-   Manuel Stoiber, Martin Pfanne, Klaus H. Strobl, Rudolph Triebel, and Alin Albu-Schäffer  
-   International Journal of Computer Vision: [paper](https://arxiv.org/abs/2110.12715)
+- **SRT3D: A Sparse Region-Based 3D Object Tracking Approach for the Real World**
+  Manuel Stoiber, Martin Pfanne, Klaus H. Strobl, Rudolph Triebel, and Alin Albu-Schäffer
+  International Journal of Computer Vision: [paper](https://arxiv.org/abs/2110.12715)
 
-- **A Sparse Gaussian Approach to Region-Based 6DoF Object Tracking**  
-   Manuel Stoiber, Martin Pfanne, Klaus H. Strobl, Rudolph Triebel, and Alin Albu-Schäffer  
-   [Best Paper] Asian Conference on Computer Vision 2020: [paper](https://openaccess.thecvf.com/content/ACCV2020/papers/Stoiber_A_Sparse_Gaussian_Approach_to_Region-Based_6DoF_Object_Tracking_ACCV_2020_paper.pdf), [supplementary](https://openaccess.thecvf.com/content/ACCV2020/supplemental/Stoiber_A_Sparse_Gaussian_ACCV_2020_supplemental.zip)
+- **A Sparse Gaussian Approach to Region-Based 6DoF Object Tracking**
+  Manuel Stoiber, Martin Pfanne, Klaus H. Strobl, Rudolph Triebel, and Alin Albu-Schäffer
+  [Best Paper] Asian Conference on Computer Vision 2020: [paper](https://openaccess.thecvf.com/content/ACCV2020/papers/Stoiber_A_Sparse_Gaussian_Approach_to_Region-Based_6DoF_Object_Tracking_ACCV_2020_paper.pdf), [supplementary](https://openaccess.thecvf.com/content/ACCV2020/supplemental/Stoiber_A_Sparse_Gaussian_ACCV_2020_supplemental.zip)
+
+```
+
+```
