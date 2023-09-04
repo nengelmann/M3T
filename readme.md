@@ -42,7 +42,7 @@ sudo apt update && sudo apt-get update
 And then install the following dependencies.
 
 ```
-sudo apt install libeigen3-dev, libglew-dev, libglfw3-dev, libopencv-dev
+sudo apt install libeigen3-dev libglew-dev libglfw3-dev libopencv-dev
 sudo apt-get install doxygen
 ```
 
