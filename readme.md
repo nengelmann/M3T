@@ -24,7 +24,7 @@ In future this repo will be extended with Luxonis [OAK](https://shop.luxonis.com
 First clone this repo and cd into this directory.
 
 ```
-https://github.com/nengelmann/M3T.git && cd ./M3T
+git clone https://github.com/nengelmann/M3T.git && cd ./M3T
 ```
 
 Then create a variable for the current working directory.
