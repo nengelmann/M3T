@@ -166,6 +166,8 @@ sudo make install
 cd $cwd
 ```
 
+**If any of the installation steps fails, please open a descriptive issue**
+
 ## Test the installation
 
 ### Build and run evaluation example
@@ -200,8 +202,6 @@ To run it:
 ```
 $cwd/M3T/examples/evaluate_rbot_dataset
 ```
-
-**If any of the installation steps fails, please open a descriptive issue**
 
 ## Usage example
 
