@@ -1,3 +1,0 @@
-# How to generate your own data using BlenderProc
-
-Code and examples coming soon ...
