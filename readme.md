@@ -214,7 +214,6 @@ Example for **RBOT dataset evaluation**.
    ```
 
    If you have set the flag for visualizing the results (step 4.) then you should see the evaluation running in a viewer. \
-   ![Video of RBOT evaluation](https://github.com/nengelmann/M3T/assets/example_video_eval_rbot_dataset.mov)
 
 ## Usage example
 
