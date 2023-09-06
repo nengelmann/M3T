@@ -1,3 +1,4 @@
+
 <p align="center">
   <h2 align="center">M3T</h2>
 </p>
@@ -213,7 +214,11 @@ Example for **RBOT dataset evaluation**.
    $cwd/M3T/examples/evaluate_rbot_dataset
    ```
 
-   If you have set the flag for visualizing the results (step 4.) then you should see the evaluation running in a viewer. \
+
+If you have set the flag for visualizing the results (step 4.) then you should see the evaluation running in a viewer. \
+
+https://github.com/nengelmann/M3T/assets/120744129/997c6e15-3920-49ed-afec-3b767e9f6b3a
+
 
 ## Usage example
 
