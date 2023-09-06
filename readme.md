@@ -214,7 +214,7 @@ Example for **RBOT dataset evaluation**.
    ```
 
    If you have set the flag for visualizing the results (step 4.) then you should see the evaluation running in a viewer. \
-   <video src="./assets/example_video_eval_rbot_dataset.mov"></video>
+   ![Video of RBOT evaluation]("./assets/example_video_eval_rbot_dataset.mov")
 
 ## Usage example
 
