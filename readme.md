@@ -178,13 +178,14 @@ Example for **RBOT dataset evaluation**.
 2. You need to create two folders, one for external files or generated files and one for the results, e.g. `./RBOT_evaluation/external/` and `./RBOT_evaluation/result/`
 3. Open `$cwd/M3T/examples/evaluate_rbot_dataset.cpp` and edit the file paths according to your setup
    e.g.
-4. Also set `evaluator.set_visualize_all_results(false);` to `evaluator.set_visualize_all_results(true);` to visualize the results. (optional)
 
    ```
    std::filesystem::path dataset_directory{"/home/full/path/to/RBOT_dataset/"};
    std::filesystem::path external_directory{"/home/full/path/to/RBOT_evaluation/external/"};
    std::filesystem::path result_directory{"/home/full/path/to/RBOT_evaluation/result/"};
    ```
+
+4. Also set `evaluator.set_visualize_all_results(false);` to `evaluator.set_visualize_all_results(true);` to visualize the results. (optional)
 
 5. Set the current working directory variable
 
@@ -211,6 +212,9 @@ Example for **RBOT dataset evaluation**.
    ```
    $cwd/M3T/examples/evaluate_rbot_dataset
    ```
+
+   If you have set the flag for visualizing the results (step 4.) then you should see the evaluation running in a viewer. \
+   <video src="./assets/example_video_eval_rbot_dataset.mov"></video>
 
 ## Usage example
 
