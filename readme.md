@@ -245,10 +245,11 @@ All you need for this demo is a DINA4 paper and a Azure Kinect.
    $cwd/M3T/examples/run_on_camera_sequence_manual_detect $cwd/M3T/data/pyramid_demo/ pyramid
    ```
 5. In the beginning there will be a static image. Within this image you need to select the reference points which are defined in `pyramid_manual_detector.yaml`. The following image shows these reference points, so that you know which points to select. You need to **select the reference points in the defined order**. \
-![manuel_detection_of_reference_points_numbers](https://github.com/nengelmann/M3T/assets/120744129/f4fa5a14-2d1f-4ef6-bbe2-af74742e87be)
+   ![manuel_detection_of_reference_points_numbers](https://github.com/nengelmann/M3T/assets/120744129/f4fa5a14-2d1f-4ef6-bbe2-af74742e87be)
 
+6. Then press `Enter` and `t` to start the tracking. If the initialization is not good you can restart the initialization by pressing `d`.
 
-6. This is how it looks in action. \
+7. This is how it looks in action. \
    #todo -> Video
 
 ## Tracking custom objects
