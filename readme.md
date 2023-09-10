@@ -224,7 +224,7 @@ https://github.com/nengelmann/M3T/assets/120744129/997c6e15-3920-49ed-afec-3b767
 All you need for this demo is a DINA4 paper and a Azure Kinect.
 
 1. Get hands on and fold a paper pyramid. \
-   ![Origami instruction - paper pyramid](https://www.youtube.com/watch?v=ySQGURoluZE&t=14)
+   ![Origami instruction - paper pyramid](https://www.youtube.com/watch?v=ySQGURoluZE)
 
 2. Set the current working variable (M3T base directory).
 
