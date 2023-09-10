@@ -1,4 +1,3 @@
-
 <p align="center">
   <h2 align="center">M3T</h2>
 </p>
@@ -188,7 +187,7 @@ Example for **RBOT dataset evaluation**.
 
 4. Also set `evaluator.set_visualize_all_results(false);` to `evaluator.set_visualize_all_results(true);` to visualize the results. (optional)
 
-5. Set the current working directory variable
+5. Set the current working variable (M3T base directory)
 
    ```
    cwd=$(pwd)
@@ -214,15 +213,45 @@ Example for **RBOT dataset evaluation**.
    $cwd/M3T/examples/evaluate_rbot_dataset
    ```
 
-
-If you have set the flag for visualizing the results (step 4.) then you should see the evaluation running in a viewer. \
+If you have set the flag for visualizing the results (step 4.) then you should see the evaluation running in a viewer.
 
 https://github.com/nengelmann/M3T/assets/120744129/997c6e15-3920-49ed-afec-3b767e9f6b3a
 
+## Usage examples
 
-## Usage example
+### Pyramid demo
 
-#todo
+All you need for this demo is a DINA4 paper and a Azure Kinect.
+
+1. Get hands on and fold a paper pyramid. \
+   ![Origami instruction - paper pyramid](https://www.youtube.com/watch?v=ySQGURoluZE&t=14)
+
+2. Set the current working variable (M3T base directory).
+
+   ```
+   cwd=$(pwd)
+   ```
+
+3. Link and compile the `run_on_camera_sequence_manual_detect.cpp` example, which will use the manual detector to initialize the pyramids pose.
+
+   ```
+   g++ -fopenmp -lGLEW -lglfw -I /usr/include/eigen3 -I /usr/local/include/opencv4 -I /usr/local/include/m3t -I $cwd/M3T/examples/ -c $cwd/M3T/examples/run_on_camera_sequence_manual_detect.cpp -o $cwd/M3T/examples/run_on_camera_sequence_manual_detect.o
+
+   g++ -fopenmp -lGLEW -lglfw $cwd/M3T/examples/run_on_camera_sequence_manual_detect.o -L /usr/local/lib -lm3t -lk4a -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -lopencv_calib3d -lopencv_features2d -lopencv_xfeatures2d -lGLEW -lglfw -lGL -o $cwd/M3T/examples/run_on_camera_sequence_manual_detect
+   ```
+
+4. Point the camera onto our paper pyramid and run.
+   ```
+   $cwd/M3T/examples/run_on_camera_sequence_manual_detect $cwd/M3T/data/pyramid_demo/ pyramid
+   ```
+5. In the beginning there will be a static image. Within this image you need to select the reference points which are defined in `pyramid_manual_detector.yaml`. The following image shows these reference points, so that you know which points to select. You need to **select the reference points in the defined order**. \
+   ![manuel_detection_of_reference_points_numbers](https://github.com/nengelmann/M3T/assets/120744129/f4fa5a14-2d1f-4ef6-bbe2-af74742e87be)
+
+6. Then press `Enter` and `t` to start the tracking. If the initialization is not good you can restart the initialization by pressing `d`.
+
+7. This is how it looks in action. \
+   ![pyramid](https://github.com/nengelmann/M3T/assets/120744129/94d30b8a-2061-4e54-a1b9-1aeccc184099)
+
 
 ## Tracking custom objects
 

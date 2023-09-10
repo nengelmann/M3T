@@ -1,0 +1,8 @@
+%YAML:1.2
+reference_points:
+  - [ -0.059, -0.059, 0.059]
+  - [ 0.0, 0.039, 0.0]
+  - [ 0.059, -0.059, 0.059]
+  - [ 0.0, -0.027, 0.039]
+
+detector_image_path: "./pyramid_manual_detector.png"
