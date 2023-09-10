@@ -250,7 +250,8 @@ All you need for this demo is a DINA4 paper and a Azure Kinect.
 6. Then press `Enter` and `t` to start the tracking. If the initialization is not good you can restart the initialization by pressing `d`.
 
 7. This is how it looks in action. \
-   #todo -> Video
+   ![pyramid](https://github.com/nengelmann/M3T/assets/120744129/94d30b8a-2061-4e54-a1b9-1aeccc184099)
+
 
 ## Tracking custom objects
 
