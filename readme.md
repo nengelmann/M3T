@@ -1,11 +1,16 @@
 <p align="center">
-  <h2 align="center">M3T</h2>
+  <h1 align="center">M3T</h1>
+  <p align="center">&#x1F916; Custom 3D object tracking system based your objects 3D model / CAD data. &#x1F916;</p>
 </p>
+<hr />
 <p align="center">
-    This repo provides examples, tools and installation instructions as well as modified source code of the <a href="https://github.com/DLR-RM/3DObjectTracking/tree/master">3DObjectTracking</a> library, provided by Manuel Stoiber and the <a href="https://github.com/DLR-RM">German Aerospace Center</a>. 
+    This repo provides examples &#x1F9EA;, tools &#x2692;&#xFE0F; and installation instructions &#x1F4DD; as well as modified source code of the <a href="https://github.com/DLR-RM/3DObjectTracking/tree/master">3DObjectTracking</a> library, provided by Manuel Stoiber and the <a href="https://github.com/DLR-RM">German Aerospace Center</a>. &#x1F680;
+    </br> This repo is <i>work in progess</i>.
 </p>
-
-# _Work in progess.._
+<hr />
+<p align="center">
+    <img src="https://github.com/nengelmann/M3T/assets/120744129/94d30b8a-2061-4e54-a1b9-1aeccc184099.gif"/>
+</p>
 
 ### 3D Object Tracking
 
